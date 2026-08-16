@@ -1,0 +1,76 @@
+/* reset 7 true oled black background */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    position: relative;
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.45;
+    pointer-events: none;  
+}
+
+.glow-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #5e5ce6, #007aff);
+    top: 30%;
+    left: 35%;
+}
+
+.glow-2 {
+    width: 250px;
+    height: 250xp;
+    background: radial-gradient(circle, #ff375f, #bf5af2);
+    bottom: 30%;
+    right: 35%;
+}
+
+.glass-btn {
+    position: relative;
+    z-index: 10;
+    padding: 18px 48px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 -1px 1px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: scale(1.04);
+    box-shadow: 0 25px 50px rgba(255, 255, 255, 0.08), 0 0 20px rgba(255, 255, 255, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.glass-btn:active {
+    transform: scale(0.97);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+
